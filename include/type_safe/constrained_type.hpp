@@ -147,22 +147,22 @@ public:
     /// operator of `value_type`, or the `Verifier` if the `value` is invalid. If the `value` is
     /// invalid, nothing will be changed. \requires `Constraint` must be copyable. \group
     /// assign_value
-    TYPE_SAFE_CONSTEXPR14 constrained_type& operator=(const value_type& other)
-    {
-        constrained_type tmp(other, get_constraint());
-        value_ = std::move(tmp).release();
-        return *this;
-    }
+    //TYPE_SAFE_CONSTEXPR14 constrained_type& operator=(const value_type& other)
+    //{
+    //    constrained_type tmp(other, get_constraint());
+    //    value_ = std::move(tmp).release();
+    //    return *this;
+    //}
 
     /// \group assign_value
-    TYPE_SAFE_CONSTEXPR14 constrained_type& operator=(value_type&& other) noexcept(
-        std::is_nothrow_move_assignable<value_type>::value&& noexcept(
-            Verifier::verify(std::move(other), std::declval<Constraint&>())))
-    {
-        constrained_type tmp(std::move(other), get_constraint());
-        value_ = std::move(tmp).release();
-        return *this;
-    }
+    //TYPE_SAFE_CONSTEXPR14 constrained_type& operator=(value_type&& other) noexcept(
+    //    std::is_nothrow_move_assignable<value_type>::value&& noexcept(
+    //        Verifier::verify(std::move(other), std::declval<Constraint&>())))
+    //{
+    //    constrained_type tmp(std::move(other), get_constraint());
+    //    value_ = std::move(tmp).release();
+    //    return *this;
+    //}
 
     /// \exclude
     template <typename U,
