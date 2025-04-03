@@ -1,3 +1,19 @@
+## Version 0.2.4
+
+* Minimum CMake version is now 3.5 (#156).
+* Better module support (#151).
+* Prevent dangling double-wrapping of `function_ref` (#154).
+* Use EBO for `strong_typedef` on MSVC (#159).
+* Add `flag_set::from_int` (#161).
+
+## Version 0.2.3
+
+* Enable the use of `import std` (#141, #147).
+* Make `strong_typedef` structural so it can be used as NTTP (#126).
+* Add safe integer comparisons (#134).
+* Enable EBO on MSVC (#128).
+* Various bugfixes and CMake improvements (#132, #133, #137, #139, #143, #146, #148).
+
 ## Version 0.2.2
 
 * Replace `TYPE_SAFE_ARITHMETIC_UB` CMake option by `TYPE_SAFE_ARITHMETIC_POLICY` to enable checked arithmetic by default (#106)

@@ -9,13 +9,8 @@ type_safe provides zero overhead abstractions that use the C++ type system to pr
 > but may lead to slightly lower runtime in debug mode,
 > especially when assertions for this library are enabled.
 
-The library features cannot really explained in the scope of this readme,
+The library features cannot really be explained in the scope of this readme,
 I highly suggest that you check out [the first](https://www.foonathan.net/2016/10/type-safe/) and [second blog post](https://www.foonathan.net/2016/10/strong-typedefs/) and the examples.
-
-> |[![](https://www.jonathanmueller.dev/embarcadero-logo.png)](https://www.embarcadero.com/de/products/cbuilder/starter) | Sponsored by [Embarcadero C++Builder](https://www.embarcadero.com/de/products/cbuilder/starter). |
-> |-------------------------------------|----------------|
->
-> If you like this project, consider [supporting me](https://jonathanmueller.dev/support-me/).
 
 ## Features
 
@@ -24,7 +19,8 @@ I highly suggest that you check out [the first](https://www.foonathan.net/2016/1
 * `ts::integer<T>` - a zero overhead wrapper over a built-in integer type
     * no default constructor to force meaningful initialization
     * no "lossy" conversions (i.e. from a bigger type or a type with a different signedness)
-    * no mixed arithmetic/comparison with floating points or integer types of a different signedness
+    * no mixed arithmetic with floating points or integer types of a different signedness
+    * no mixed comparison with floating points
     * over/underflow is undefined behavior in release mode - even for `unsigned` integers,
       enabling compiler optimizations
 * `ts::floating_point<T>` - a zero overhead wrapper over a built-in floating point
